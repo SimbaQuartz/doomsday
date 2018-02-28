@@ -1,0 +1,60 @@
+
+/*
+ * This code is written by Manjot Singh, and under plagarism
+ * of this code in any circumstances will be subject to the
+ * copyright issues.
+ * 
+ * 
+ * 
+ * Manjot Singh- (Project Developer)
+ * */
+
+package rishman;
+
+import java.util.Date;
+import java.security.MessageDigest;
+
+import com.google.*;	
+
+public class Block {
+
+	public String hash;
+	public String previousHash;
+	private String data;
+	private long timeStamp;
+
+	public Block(String data,String previousHash ) {
+		this.data = data;
+		this.previousHash = previousHash;
+        this.timeStamp = new Date().getTime();
+        this.hash=calculateHash();
+    }
+	
+    public String calculateHash() {
+        String calculatedhash = StringUtil.applySha256( 
+                previousHash +
+                Long.toString(timeStamp) +
+                data 
+                );
+        return calculatedhash;
+    }
+}
+
+ class StringUtil {
+	public static String applySha256(String input){		
+		try {
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");	        
+			byte[] hash = digest.digest(input.getBytes("UTF-8"));	        
+			StringBuffer hexString = new StringBuffer(); 
+			for (int i = 0; i < hash.length; i++) {
+				String hex = Integer.toHexString(0xff & hash[i]);
+				if(hex.length() == 1) hexString.append('0');
+				hexString.append(hex);
+			}
+			return hexString.toString();
+		}
+		catch(Exception e) {
+			throw new RuntimeException(e);
+		}
+	}	
+}

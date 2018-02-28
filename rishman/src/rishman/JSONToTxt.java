@@ -1,3 +1,14 @@
+
+/*
+ * This code is written by Manjot Singh, and under plagiarism
+ * of this code in any circumstances will be subject to the
+ * copyright issues.
+ * 
+ * 
+ * 
+ * Manjot Singh- (Project Developer)
+ * */
+
 //package rishman;
 //
 //import com.google.gson.Gson;
