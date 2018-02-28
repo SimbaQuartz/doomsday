@@ -1,5 +1,7 @@
 Hi There!
-We that the Team Hack ZeroToOne for providing us the platform to be able to think about the emerging blockchain technology. We are happy to be associated with CESS, GNDU.
+We thank the Team Hack ZeroToOne for providing us the platform to be able to think about the emerging blockchain technology. We are happy to be associated with CESS, GNDU.
+
+We thank Thapar Institute of Engineering and Technology, for providing us the resources to commence with our project.
 
 We are commiting out project at GitHub as a Public repository. It is to be notified that copy of the files of this repository is strictly prohibited withouh the authorization of the developers.
 
